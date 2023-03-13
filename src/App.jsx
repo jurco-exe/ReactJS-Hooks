@@ -5,6 +5,7 @@ import UseStateComponent2 from "./UseStateComponent2";
 import UseStateComponent3 from "./UseStateComponent3";
 import UseRefComponent1 from "./UseRefComponent1";
 import UseRefComponent2 from "./UseRefComponent2";
+import UseReducerComponent1 from "./UseReducerComponent1";
 
 function App() {
   return (
@@ -39,6 +40,12 @@ function App() {
         <hr />
         <h1>2. useRef</h1>
         <UseRefComponent2 />
+      </div>
+      <hr />
+
+      <div className="useReducer">
+        <h1>1. useReducer</h1>
+        <UseReducerComponent1 />
       </div>
     </div>
   );
