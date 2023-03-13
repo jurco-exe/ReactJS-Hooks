@@ -27,6 +27,10 @@ body {
   color: rgb(0, 174, 255);
 }
 
+.useRef h1 {
+  color: yellow;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

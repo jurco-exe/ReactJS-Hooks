@@ -3,6 +3,8 @@ import UseEffectComponent1 from "./UseEffectComponent1";
 import UseStateComponent1 from "./UseStateComponent1";
 import UseStateComponent2 from "./UseStateComponent2";
 import UseStateComponent3 from "./UseStateComponent3";
+import UseRefComponent1 from "./UseRefComponent1";
+import UseRefComponent2 from "./UseRefComponent2";
 
 function App() {
   return (
@@ -30,6 +32,14 @@ function App() {
         <UseContextComponent1 />
       </div>
       <hr />
+
+      <div className="useRef">
+        <h1>1. useRef</h1>
+        <UseRefComponent1 />
+        <hr />
+        <h1>2. useRef</h1>
+        <UseRefComponent2 />
+      </div>
     </div>
   );
 }
