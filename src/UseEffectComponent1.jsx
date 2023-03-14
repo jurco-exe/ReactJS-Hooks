@@ -7,8 +7,8 @@ import { useState } from "react";
 //* ==> SIDEEFFECTS = actions which are performed with the "outside world"
 //* ==> :: we perform a side effect when we need to reach outside of our React components to do something
 
-//! fetching data from API
-//! updating the DOM document & window
+//! fetching data from API or backend
+//! updating the DOM document or window object
 //! timer functions
 
 //? VARIATION OF USEEFFECT:
@@ -27,6 +27,7 @@ const UseEffectComponent1 = () => {
   //! callback ==> WHAT TO RUN | dependencies ==> WHEN TO RUN
 
   //* 1. VARIATION:
+  //! it runs with first render and also run on any thing changes in that component.
   // useEffect(() => {
   //   document.title = `${counter} <== update`;
   // });
@@ -35,9 +36,10 @@ const UseEffectComponent1 = () => {
   // useEffect(() => {
   //   document.title = `${counter} <== update`;
   // }, []); //? this will be set on [0]
-  //! this type of useEffect runs 1 time and then never again
+  //! it runs only on first render. Useful for Fetching data.
 
   //* 3. VARIATION:
+  //! it runs on first render and then any variable that we pass in dependency change it will run.
   // useEffect(() => {
   //   document.title = `${counter} <== update`;
   // }, []);
@@ -47,7 +49,7 @@ const UseEffectComponent1 = () => {
   // }, [otherCounter]); //! it will change only by this variable not that above
 
   //* Cleanup Function:
-  //? to use cleanup function we need to use return in our useEffect
+  //? To use clean-up function we need to run return function in useEffect.
   // useEffect(() => {
   //   const timer = setInterval(() => {
   //     //* this interval wont stop until we add a cleanup fucntion
